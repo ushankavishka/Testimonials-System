@@ -9,16 +9,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let itemsPerPage = getItemsPerPage();
     let autoSlideInterval;
     let isUserInteracting = false;
-    const autoSlideDelay = 5000; // 5 seconds
+    const autoSlideDelay = 5000; 
 
     // Function to determine items per page based on screen size
     function getItemsPerPage() {
         if (window.innerWidth <= 768) {
-            return 1; // Mobile view
+            return 1; 
         } else if (window.innerWidth <= 1024) {
-            return 2; // Tablet view
+            return 2; 
         }
-        return 3; // Desktop view
+        return 3; 
     }
 
     // Update itemsPerPage on window resize
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const newItemsPerPage = getItemsPerPage();
         if (newItemsPerPage !== itemsPerPage) {
             itemsPerPage = newItemsPerPage;
-            currentPage = 0; // Reset to first page when layout changes
+            currentPage = 0; 
             updateCarousel();
         }
     });
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPage--;
             updateCarousel();
         }
-        setTimeout(handleUserInteractionEnd, 3000); // Resume auto-slide after 3 seconds
+        setTimeout(handleUserInteractionEnd, 3000); 
     });
 
     document.querySelector('.next-btn').addEventListener('click', () => {
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPage++;
             updateCarousel();
         }
-        setTimeout(handleUserInteractionEnd, 3000); // Resume auto-slide after 3 seconds
+        setTimeout(handleUserInteractionEnd, 3000); 
     });
 
     carouselDots.addEventListener('click', (e) => {
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
             handleUserInteractionStart();
             currentPage = parseInt(dot.dataset.page);
             updateCarousel();
-            setTimeout(handleUserInteractionEnd, 3000); // Resume auto-slide after 3 seconds
+            setTimeout(handleUserInteractionEnd, 3000); 
         }
     });
 
@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentPage = 0;
                 updateCarousel();
                 if (testimonialsList.length > itemsPerPage) {
-                    startAutoSlide(); // Start auto-slide only if there are more than 3 testimonials
+                    startAutoSlide(); 
                 }
             }
         } catch (error) {
