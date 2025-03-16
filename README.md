@@ -2,6 +2,10 @@
 
 A modern and responsive testimonials system that allows users to submit and view reviews with star ratings. Built with HTML, CSS, JavaScript, PHP, and MySQL.
 
+## Screenshot
+
+![Modern Testimonials System](screenshot.png)
+
 ## Features
 
 - Modern and responsive design
